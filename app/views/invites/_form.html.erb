@@ -18,6 +18,14 @@
   <div class="field">
     <%= f.hidden_field :event_id, :value => @event.id %>
   </div>
+
+  <div class="field">
+    <%= radio_button_tag(:attending, "yes") %>
+    <%= label_tag(:attending_yes, "yes") %>
+    <%= radio_button_tag(:attending, "no") %>
+    <%= label_tag(:attending_no, "no") %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

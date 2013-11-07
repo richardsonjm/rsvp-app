@@ -49,7 +49,7 @@ class InvitesController < ApplicationController
   def update
     respond_to do |format|
       if @invite.update(invite_params)
-        format.html { redirect_to @invite, notice: 'Invite was successfully updated.' }
+        format.html { redirect_to event_invites_url, notice: 'Invite was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -76,6 +76,8 @@ class InvitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def invite_params
-      params.require(:invite).permit(:name, :event_id)
+      attending_hash = {:attending => params[:attending]}
+      params[:invite].merge!(attending_hash)
+      params.require(:invite).permit(:name, :event_id, :attending)
     end
 end
