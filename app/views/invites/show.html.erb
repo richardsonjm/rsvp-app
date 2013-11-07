@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @invite.name %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event.name %>
+</p>
+
+<%= link_to 'Edit', edit_event_invite_path(@event, @invite) %> |
+<%= link_to 'Back', event_invites_path %>

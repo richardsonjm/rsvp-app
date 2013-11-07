@@ -2,6 +2,22 @@ RsvpApp::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+    # resources :zombies do
+    #   resources :tweets
+    # end
+
+    # /zombies/4/tweets/2
+
+    # /zombies/4/tweets
+    
+    # events ~ zombies
+    # invites ~ tweets
+
+    resources :events do
+      resources :invites
+    end
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
