@@ -16,8 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :event_id %><br>
-    <%= f.number_field :event_id %>
+    <%= f.hidden_field :event_id, :value => @event.id %>
   </div>
   <div class="actions">
     <%= f.submit %>

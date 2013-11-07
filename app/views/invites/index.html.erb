@@ -1,4 +1,4 @@
-<h1>Listing invites</h1>
+<h1>Listing invites for <%= @event.name %></h1>
 
 <table>
   <thead>
@@ -26,6 +26,6 @@
 
 <br>
 
-<%= link_to 'New Invite', new_event_invite_path(@event) %></br>
+<%= link_to 'New Invite', new_event_invite_path(@event) %></br></br>
 
 <%= link_to 'Events page', events_path %>
